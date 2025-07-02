@@ -95,7 +95,7 @@ Stateful; return traffic is automatically allowed.
 
 ### Network ACLs (NACLs):
 Subnet-level stateless firewalls with allow and deny rules.
-Used for fine-grained control over subnet traffic.
+Stateless: Return traffic must be explicitly allowed with separate inbound and outbound rules.
 
 ### Internet Gateway:
 Enables communication between resources in your VPC and the internet.
@@ -936,8 +936,8 @@ For workloads requiring intensive CPU, memory, or GPU (e.g., machine learning, H
 ### Connection Draining: 
 Allows an Elastic Load Balancer to stop sending new requests to an EC2 instance while keeping existing connections alive until they finish.
 
-### Synchronous Communication: 
-The client sends a request and waits for the response before continuing.
+### Synchronous Replication: 
+Data is copied to a secondary location in real-time, ensuring both locations are always in sync but with higher latency.
 
-### Asynchronous Communication: 
-The client sends a request and proceeds without waiting for a response.
+### Asynchronous Replication: 
+Data is copied with a delay, allowing for lower latency but potential data loss in a failure.
